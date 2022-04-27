@@ -15,6 +15,5 @@ To learn how to get a user's current location, the weather from that location, a
 SwiftUI, XCode, Core Location, Core Image, Foundation
 
 ## Resources
-* Create a weather app from scratch using SwiftUI
-* [YouTube Tutorial](https://youtu.be/X2W9MPjrIbk)
+* [Create a weather app from scratch using SwiftUI](https://youtu.be/X2W9MPjrIbk)
 * Apple developer API documention
