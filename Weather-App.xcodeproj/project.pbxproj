@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A240D57F281A4F5D00C09055 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A240D57E281A4F5D00C09055 /* WeatherManager.swift */; };
 		A25D7D522818DABC003796C4 /* weatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D7D512818DABC003796C4 /* weatherApp.swift */; };
 		A25D7D542818DABC003796C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D7D532818DABC003796C4 /* ContentView.swift */; };
 		A25D7D562818DABE003796C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25D7D552818DABE003796C4 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A240D57E281A4F5D00C09055 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		A25D7D4E2818DABC003796C4 /* Weather-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25D7D512818DABC003796C4 /* weatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherApp.swift; sourceTree = "<group>"; };
 		A25D7D532818DABC003796C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				A25D7D602818DB13003796C4 /* LocationManager.swift */,
+				A240D57E281A4F5D00C09055 /* WeatherManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A240D57F281A4F5D00C09055 /* WeatherManager.swift in Sources */,
 				A25D7D542818DABC003796C4 /* ContentView.swift in Sources */,
 				A25D7D522818DABC003796C4 /* weatherApp.swift in Sources */,
 				A25D7D612818DB13003796C4 /* LocationManager.swift in Sources */,
