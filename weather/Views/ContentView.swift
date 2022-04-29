@@ -12,11 +12,25 @@ struct ContentView: View {
     //initialize location manage
     // StateObject property wrapper so the view manager can be notified anytime a change occurs in LM
     @StateObject var locationManager = LocationManager()
+    var weatherManager = WeatherManager()
+    @State var weatherResponse: ResponseBody?
+
     var body: some View {
         VStack {
-            
-            if let location = locationManager.location {
-                Text("Your coordinates are:\(location.latitude) - \(location.longitude)")
+            if let location =
+                locationManager.location {
+                if let weatherResponse = weatherResponse {
+                    WeatherView(weather: weatherResponse)
+                } else {
+                    LoadingView()
+                        .task {
+                            do {
+                                weatherResponse = try await weatherManager.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
+                            } catch {
+                                print("Error getting weather: \(error)")
+                            }
+                        }
+                }
             } else {
                 if locationManager.isLoading {
                     LoadingView()
@@ -24,9 +38,6 @@ struct ContentView: View {
                     WelcomeView().environmentObject(locationManager)
                 }
             }
-            let long = "45.9999"
-            let lat = "56.0000"
-            Text("Your coordinates are: LAT: \(lat) LONG: \(long)")
 
         }
         .background(Color(hue: 0.701, saturation: 0.907, brightness: 0.442))
